@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Admin - 2K27 Prom</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="admin-page">
+
+        <div class="content">
+
+            <p class="small-title">
+                2K27 PROM
+            </p>
+
+
+            <h2>
+                Registration
+                <span>Admin.</span>
+            </h2>
+
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <div class="admin-notice">
+                        {{ messages[-1] }}
+                    </div>
+                {% endif %}
+            {% endwith %}
+<a
+    href="{{ url_for('admin_logout') }}"
+    class="admin-logout"
+>
+    LOG OUT
+</a>
+
+            <div class="admin-table">
+
+                <!-- TABLE HEADER -->
+
+                <div class="admin-header">
+
+                    <span>REGISTRATION</span>
+
+                    <span>NAME</span>
+
+                    <span>GUEST</span>
+
+                    <span>STATUS</span>
+
+                    <span>ACTION</span>
+
+                </div>
+
+
+                <!-- REGISTRATIONS -->
+
+                {% for registration in registrations %}
+
+                <div class="admin-row">
+
+                    <span>
+                        {{ registration.registration_code }}
+                    </span>
+
+
+                    <span>
+                        {{ registration.name }}
+                    </span>
+
+
+                    <span>
+                        {{ registration.guest_name or "No guest" }}
+                    </span>
+
+
+                    <span class="payment-status">
+
+                        {{ registration.payment_status }}
+
+                    </span>
+
+
+                    <span>
+
+                        {% if registration.payment_status == "PAYMENT_REPORTED" %}
+
+                        <form
+                            method="POST"
+                            action="/admin/approve/{{ registration.registration_code }}"
+                        >
+
+                            <button
+                                type="submit"
+                                class="approve-button"
+                            >
+                                VERIFY & APPROVE
+                            </button>
+
+                        </form>
+
+
+                        {% elif registration.payment_status == "PAID" %}
+
+                        <span class="approved-label">
+                            ✓ PAID
+                        </span>
+
+
+                        {% else %}
+
+                        <span class="waiting-label">
+                            WAITING FOR PAYMENT
+                        </span>
+
+                        {% endif %}
+
+                    </span>
+
+                </div>
+
+
+                {% else %}
+
+                <div class="admin-empty">
+
+                    No registrations yet.
+
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+
+        <div class="page-number">
+            ADMIN
+        </div>
+
+    </main>
+
+
+</body>
+
+</html>

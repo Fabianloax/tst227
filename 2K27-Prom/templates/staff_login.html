@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Login - 2K27 Prom</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<main class="staff-page">
+
+    <div class="content">
+
+        <p class="small-title">2K27 PROM</p>
+
+        <h2>Staff <span>Login.</span></h2>
+
+        <form method="POST" class="staff-form">
+
+            <input
+                type="password"
+                name="password"
+                placeholder="STAFF PASSWORD"
+                autocomplete="off"
+                required
+            >
+
+            <button type="submit" class="register-button">
+                <span>LOG IN</span>
+                <span class="arrow">→</span>
+            </button>
+
+        </form>
+
+        {% if error %}
+        <div class="staff-result staff-error">
+            <p class="result-status">✕ {{ error }}</p>
+        </div>
+        {% endif %}
+
+    </div>
+
+    <div class="page-number">STAFF</div>
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Rules — 2K27 Prom</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+
+<body>
+
+    <main class="rules-page">
+
+        <div class="content">
+
+            <p class="small-title">
+                BEFORE YOU CONTINUE
+            </p>
+
+            <h2>
+                A quick
+                <span>agreement.</span>
+            </h2>
+
+            <p class="rules-text">
+
+                By clicking next, you agree to
+                follow the
+
+                <a
+                    href="#"
+                    class="rules-link"
+                    onclick="openRules()"
+                >
+                    rules
+                </a>.
+
+            </p>
+
+
+            <button
+                class="register-button"
+                onclick="goToDetails()"
+            >
+
+                <span>NEXT</span>
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </button>
+
+        </div>
+
+
+        <div class="page-number">
+            02 / 04
+        </div>
+
+    </main>
+
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Staff Entry - 2K27 Prom</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="staff-page">
+
+        <div class="content">
+
+            <p class="small-title">
+                2K27 PROM
+            </p>
+
+
+            <h2>
+                Entrance
+                <span>Verification.</span>
+            </h2>
+
+
+            <p class="staff-description">
+                Enter the guest's entrance code
+                to verify their registration.
+            </p>
+
+
+            <form
+                method="POST"
+                action="/staff/check"
+                class="staff-form"
+            >
+
+                <input
+                    type="text"
+                    name="entrance_code"
+                    placeholder="ENT-XXXXXXXX"
+                    autocomplete="off"
+                    required
+                >
+
+
+                <button
+                    type="submit"
+                    class="register-button"
+                >
+
+                    <span>
+                        CHECK CODE
+                    </span>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </button>
+
+            </form>
+
+
+            {% if valid %}
+
+            <div class="staff-result staff-valid">
+
+                <p class="result-status">
+                    ✓ VALID ENTRY
+                </p>
+
+                <p>
+                    Registration:
+                    <strong>
+                        {{ registration.registration_code }}
+                    </strong>
+                </p>
+
+                <p>
+                    Name:
+                    <strong>
+                        {{ registration.name }}
+                    </strong>
+                </p>
+
+                <p>
+                    Guest:
+                    <strong>
+                        {{ registration.guest_name or "No guest" }}
+                    </strong>
+                </p>
+
+            </div>
+
+            {% endif %}
+
+
+            {% if error %}
+
+            <div class="staff-result staff-error">
+
+                <p class="result-status">
+                    ✕ {{ error }}
+                </p>
+
+                {% if registration %}
+
+                <p>
+                    Registration:
+                    <strong>
+                        {{ registration.registration_code }}
+                    </strong>
+                </p>
+
+                {% endif %}
+
+            </div>
+
+            {% endif %}
+
+        </div>
+
+
+        <div class="page-number">
+            STAFF
+        </div>
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Review - 2K27 Prom</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="review-page">
+
+        <div class="content">
+
+            <p class="small-title">
+                ALMOST THERE
+            </p>
+
+            <h2>
+                Check your
+                <span>details.</span>
+            </h2>
+
+
+            <div class="review-details">
+
+                <div class="review-row">
+                    <span>FULL NAME</span>
+                    <strong id="review-name">
+                        —
+                    </strong>
+                </div>
+
+
+                <div class="review-row">
+                    <span>EMAIL</span>
+                    <strong id="review-email">
+                        —
+                    </strong>
+                </div>
+
+
+                <div class="review-row">
+                    <span>PHONE</span>
+                    <strong id="review-phone">
+                        —
+                    </strong>
+                </div>
+
+
+                <div class="review-row">
+                    <span>GUEST</span>
+                    <strong id="review-guest">
+                        No guest
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="review-actions">
+
+                <button
+                    type="button"
+                    class="secondary-button"
+                    onclick="editDetails()"
+                >
+                    EDIT DETAILS
+                </button>
+<button
+    type="button"
+    class="register-button"
+    onclick="submitRegistration()"
+>
+
+    <span>
+        CONFIRM & CONTINUE
+    </span>
+
+    <span class="arrow">
+        →
+    </span>
+
+</button>
+
+            </div>
+
+        </div>
+
+
+        <div class="page-number">
+            04 / 07
+        </div>
+
+    </main>
+
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1249 @@
+/* =========================
+   2K27 PROM
+   MAIN STYLES
+========================= */
+
+:root {
+    --black: #080808;
+    --yellow: #F4ED9F;
+    --wine: #742F45;
+    --white: #F7F6F1;
+    --grey: #999993;
+}
+
+
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+
+body {
+    background: var(--black);
+    color: var(--white);
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================
+   MAIN PAGE
+========================= */
+
+.intro {
+    min-height: 100vh;
+    min-height: 100svh;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 30px;
+}
+
+
+/* =========================
+   WINE BACKGROUND GLOW
+========================= */
+
+.intro::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    background: var(--wine);
+
+    border-radius: 50%;
+
+    filter: blur(130px);
+
+    opacity: 0.25;
+
+    top: -120px;
+    right: -100px;
+}
+
+
+/* =========================
+   YELLOW BACKGROUND GLOW
+========================= */
+
+.intro::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    background: var(--yellow);
+
+    border-radius: 50%;
+
+    filter: blur(150px);
+
+    opacity: 0.08;
+
+    bottom: -120px;
+    left: -100px;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.content {
+
+    width: 100%;
+
+    max-width: 450px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================
+   SMALL TITLE
+========================= */
+
+.small-title {
+
+    color: var(--yellow);
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.3em;
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================
+   MAIN TITLE
+========================= */
+
+h1 {
+
+    font-size: clamp(48px, 14vw, 75px);
+
+    line-height: 0.88;
+
+    letter-spacing: -0.06em;
+
+    font-weight: 800;
+}
+
+
+h1 span {
+
+    display: block;
+
+    color: var(--yellow);
+
+    font-style: italic;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.description {
+
+    margin-top: 30px;
+
+    color: var(--grey);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    max-width: 250px;
+}
+
+
+/* =========================
+   REGISTER BUTTON
+========================= */
+
+.register-button {
+
+    margin-top: 42px;
+
+    width: 100%;
+
+    height: 64px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: var(--yellow);
+
+    color: var(--black);
+
+    padding: 0 23px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.05em;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Arrow */
+
+.arrow {
+
+    font-size: 23px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+/* Button hover */
+
+.register-button:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 40px
+        rgba(244, 237, 159, 0.16);
+}
+
+
+.register-button:hover .arrow {
+
+    transform: translateX(7px);
+}
+
+
+/* =========================
+   PAGE NUMBER
+========================= */
+
+.page-number {
+
+    position: absolute;
+
+    right: 30px;
+    bottom: 25px;
+
+    color: #555550;
+
+    font-size: 10px;
+
+    letter-spacing: 0.2em;
+
+    z-index: 2;
+}
+/* =========================
+   RULES PAGE
+========================= */
+
+.rules-page {
+
+    min-height: 100vh;
+    min-height: 100svh;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 30px;
+}
+
+
+/* Wine glow */
+
+.rules-page::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    background: var(--wine);
+
+    border-radius: 50%;
+
+    filter: blur(130px);
+
+    opacity: 0.2;
+
+    top: -120px;
+    left: -100px;
+}
+
+
+/* Yellow glow */
+
+.rules-page::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    background: var(--yellow);
+
+    border-radius: 50%;
+
+    filter: blur(150px);
+
+    opacity: 0.07;
+
+    bottom: -120px;
+    right: -100px;
+}
+
+
+/* Rules heading */
+
+.rules-page h2 {
+
+    font-size: clamp(45px, 13vw, 70px);
+
+    line-height: 0.9;
+
+    letter-spacing: -0.06em;
+
+    font-weight: 800;
+
+    margin-bottom: 30px;
+}
+
+
+.rules-page h2 span {
+
+    display: block;
+
+    color: var(--yellow);
+
+    font-style: italic;
+
+    font-weight: 500;
+}
+
+
+/* Rules paragraph */
+
+.rules-text {
+
+    color: var(--grey);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    max-width: 320px;
+}
+
+
+/* Rules link */
+
+.rules-link {
+
+    color: var(--yellow);
+
+    text-decoration: underline;
+
+    text-decoration-color: var(--wine);
+
+    text-decoration-thickness: 2px;
+
+    text-underline-offset: 5px;
+
+    font-weight: 700;
+
+    transition: color 0.25s ease;
+}
+
+
+.rules-link:hover {
+
+    color: var(--white);
+}
+
+
+/* =========================
+   PAGE TRANSITION
+========================= */
+
+body {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+body.page-exit {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+.register-button {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    user-select: none;
+}
+.register-button:focus,
+.register-button:active {
+    outline: none;
+}
+/* ================================
+   ADMIN PANEL
+================================ */
+
+.admin-page {
+    min-height: 100vh;
+    padding: 70px 8%;
+    position: relative;
+}
+
+.admin-page .content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.admin-page h2 {
+    margin-bottom: 50px;
+}
+
+
+/* TABLE */
+
+.admin-table {
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+}
+
+
+/* HEADER */
+
+.admin-header,
+.admin-row {
+    display: grid;
+   grid-template-columns: 1.3fr 1.5fr 1.2fr 1fr 1.3fr;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 26px;
+}
+
+
+.admin-header {
+    background: rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+
+.admin-row {
+    font-size: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.admin-row:last-child {
+    border-bottom: none;
+}
+
+
+.admin-row:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+
+/* REGISTRATION ID */
+
+.admin-row span:first-child {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+
+/* PAYMENT STATUS */
+
+.admin-row span:last-child {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* EMPTY */
+
+.admin-empty {
+    padding: 50px;
+    text-align: center;
+
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .admin-page {
+        padding: 40px 20px;
+    }
+
+
+    .admin-header {
+        display: none;
+    }
+
+
+    .admin-row {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 22px;
+    }
+
+
+    .admin-row span {
+        width: 100%;
+    }
+
+}
+/* ================================
+   ADMIN APPROVAL
+================================ */
+
+.approve-button {
+    border: none;
+    padding: 10px 16px;
+
+    border-radius: 8px;
+
+    background: white;
+    color: black;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+.approve-button:hover {
+    transform: translateY(-2px);
+    opacity: 0.85;
+}
+
+
+.approved-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    opacity: 0.6;
+}
+/* ================================
+   STAFF ENTRANCE CHECKER
+================================ */
+
+.staff-page {
+    min-height: 100vh;
+    padding: 70px 8%;
+    position: relative;
+}
+
+
+.staff-page .content {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+.staff-page h2 {
+    margin-bottom: 20px;
+}
+
+
+.staff-description {
+    margin-bottom: 35px;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 14px;
+}
+
+
+.staff-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.staff-form input {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 18px 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    color: white;
+
+    font-size: 16px;
+    letter-spacing: 1px;
+
+    outline: none;
+}
+
+
+.staff-form input:focus {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+
+.staff-result {
+    margin-top: 30px;
+    padding: 25px;
+
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+.result-status {
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+
+.staff-valid {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.staff-error {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+.staff-result p {
+    margin: 5px 0;
+}
+
+
+.staff-result strong {
+    font-weight: 700;
+}
+
+
+@media (max-width: 700px) {
+
+    .staff-page {
+        padding: 40px 20px;
+    }
+
+}
+/* ================================
+   ADMIN LOGIN
+================================ */
+
+.admin-login-page {
+    min-height: 100vh;
+    padding: 70px 8%;
+    position: relative;
+}
+
+
+.admin-login-page .content {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
+.admin-login-page h2 {
+    margin-bottom: 20px;
+}
+
+
+.admin-login-description {
+    margin-bottom: 30px;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 14px;
+}
+
+
+.admin-login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.admin-login-form input {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 18px 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    color: white;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+
+.admin-login-form input:focus {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+
+.admin-login-error {
+    margin-top: 20px;
+
+    font-size: 13px;
+
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+.admin-logout {
+    display: inline-block;
+
+    margin-bottom: 30px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    text-decoration: none;
+}
+
+
+.admin-logout:hover {
+    color: white;
+}
+
+
+/* ================================
+   REGISTRATION, PAYMENT & TICKETS
+================================ */
+
+.details-page,
+.multiple-guests-page,
+.review-page,
+.payment-page,
+.payment-pending-page,
+.confirmed-page {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 54px 30px;
+}
+
+.details-page::before,
+.multiple-guests-page::before,
+.review-page::before,
+.payment-page::before,
+.payment-pending-page::before,
+.confirmed-page::before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: var(--wine);
+    filter: blur(140px);
+    opacity: 0.22;
+    top: -160px;
+    right: -120px;
+}
+
+.details-page::after,
+.multiple-guests-page::after,
+.review-page::after,
+.payment-page::after,
+.payment-pending-page::after,
+.confirmed-page::after {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: var(--yellow);
+    filter: blur(150px);
+    opacity: 0.07;
+    bottom: -140px;
+    left: -110px;
+}
+
+.details-page h2,
+.multiple-guests-page h2,
+.review-page h2,
+.payment-page h2,
+.payment-pending-page h2,
+.confirmed-page h2,
+.admin-page h2,
+.admin-login-page h2,
+.staff-page h2 {
+    font-size: clamp(42px, 11vw, 66px);
+    line-height: 0.92;
+    letter-spacing: -0.06em;
+    font-weight: 800;
+}
+
+.details-page h2 span,
+.multiple-guests-page h2 span,
+.review-page h2 span,
+.payment-page h2 span,
+.payment-pending-page h2 span,
+.confirmed-page h2 span,
+.admin-page h2 span,
+.admin-login-page h2 span,
+.staff-page h2 span {
+    display: block;
+    color: var(--yellow);
+    font-style: italic;
+    font-weight: 500;
+}
+
+.details-page .content,
+.multiple-guests-page .content,
+.review-page .content,
+.payment-page .content,
+.payment-pending-page .content,
+.confirmed-page .content {
+    margin: 0 auto;
+}
+
+/* Details form */
+
+#details-form {
+    margin-top: 32px;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 8px 3px;
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.optional {
+    color: var(--grey);
+    font-weight: 500;
+}
+
+.input-group input,
+.staff-form input,
+.admin-login-form input {
+    width: 100%;
+    border: 1px solid rgba(247, 246, 241, 0.16);
+    border-radius: 12px;
+    background: rgba(247, 246, 241, 0.05);
+    color: var(--white);
+    padding: 17px 18px;
+    font: inherit;
+    outline: none;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.input-group input::placeholder,
+.staff-form input::placeholder,
+.admin-login-form input::placeholder {
+    color: rgba(247, 246, 241, 0.36);
+}
+
+.input-group input:focus,
+.staff-form input:focus,
+.admin-login-form input:focus {
+    border-color: var(--yellow);
+    background: rgba(247, 246, 241, 0.08);
+}
+
+.multiple-guests-link {
+    display: inline-block;
+    margin-top: 2px;
+    color: var(--grey);
+    font-size: 13px;
+    text-underline-offset: 4px;
+}
+
+#details-form .register-button,
+.payment-page .register-button,
+.review-actions .register-button,
+.guest-actions .register-button {
+    margin-top: 28px;
+}
+
+/* Review and guest choice */
+
+.review-details,
+.guest-price,
+.payment-card,
+.confirmation-card,
+.ticket-card {
+    margin-top: 32px;
+    border: 1px solid rgba(247, 246, 241, 0.14);
+    border-radius: 18px;
+    background: rgba(247, 246, 241, 0.045);
+    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.18);
+}
+
+.review-details {
+    overflow: hidden;
+}
+
+.review-row,
+.ticket-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 17px 18px;
+    border-bottom: 1px solid rgba(247, 246, 241, 0.1);
+}
+
+.review-row:last-child,
+.ticket-row:last-child {
+    border-bottom: 0;
+}
+
+.review-row span,
+.ticket-row > span,
+.payment-label,
+.confirmation-label {
+    color: var(--grey);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+}
+
+.review-row strong,
+.ticket-row strong {
+    max-width: 62%;
+    text-align: right;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.review-actions,
+.guest-actions {
+    margin-top: 26px;
+    display: grid;
+    gap: 12px;
+}
+
+.secondary-button {
+    width: 100%;
+    min-height: 52px;
+    border: 1px solid rgba(247, 246, 241, 0.24);
+    border-radius: 50px;
+    background: transparent;
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.secondary-button:hover {
+    border-color: var(--yellow);
+    background: rgba(244, 237, 159, 0.09);
+}
+
+.guest-warning,
+.pending-text,
+.confirmed-description {
+    margin-top: 24px;
+    color: var(--grey);
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+.guest-price {
+    padding: 24px;
+}
+
+.guest-price p {
+    color: var(--grey);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+}
+
+.guest-price h3 {
+    margin-top: 8px;
+    color: var(--yellow);
+    font-size: 35px;
+    letter-spacing: -0.04em;
+}
+
+/* Payment and pending */
+
+.payment-card {
+    padding: 24px;
+}
+
+.registration-id,
+.payment-price,
+.account-name,
+.account-number,
+.confirmation-value {
+    margin-top: 7px;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.registration-id,
+.confirmation-value {
+    color: var(--yellow);
+    font-size: 17px;
+    letter-spacing: 0.06em;
+}
+
+.payment-price {
+    color: var(--yellow);
+    font-size: 32px;
+    letter-spacing: -0.05em;
+}
+
+.account-name,
+.account-number {
+    font-size: 15px;
+}
+
+.payment-divider,
+.ticket-divider {
+    height: 1px;
+    margin: 22px 0;
+    background: rgba(247, 246, 241, 0.12);
+}
+
+.payment-note,
+.payment-warning,
+.pending-note,
+.entrance-note,
+.confirmed-footer {
+    color: var(--grey);
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+.payment-note {
+    margin-top: 20px;
+}
+
+.payment-warning,
+.pending-note,
+.confirmed-footer {
+    margin-top: 18px;
+    text-align: center;
+}
+
+.pending-status {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 25px;
+    color: var(--yellow);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--yellow);
+    box-shadow: 0 0 0 5px rgba(244, 237, 159, 0.1);
+}
+
+.confirmation-card {
+    padding: 22px;
+}
+
+.payment-pending-page .register-button {
+    margin-top: 22px;
+    text-decoration: none;
+}
+
+/* Confirmed ticket */
+
+.ticket-card {
+    padding: 22px;
+}
+
+.ticket-header {
+    display: flex;
+    justify-content: space-between;
+    color: var(--yellow);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+}
+
+.ticket-details {
+    border: 1px solid rgba(247, 246, 241, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.entrance-section {
+    text-align: center;
+}
+
+.entrance-code {
+    margin-top: 10px;
+    color: var(--black);
+    border-radius: 12px;
+    background: var(--yellow);
+    padding: 17px 12px;
+    font-size: clamp(22px, 7vw, 30px);
+    font-weight: 800;
+    letter-spacing: 0.08em;
+}
+
+.entrance-note {
+    margin-top: 12px;
+}
+
+.admin-notice {
+    margin: 18px 0;
+    border: 1px solid rgba(244, 237, 159, 0.3);
+    border-radius: 10px;
+    background: rgba(244, 237, 159, 0.08);
+    color: var(--yellow);
+    padding: 12px 14px;
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+.waiting-label {
+    color: var(--grey);
+}
+
+@media (max-width: 700px) {
+    .details-page,
+    .multiple-guests-page,
+    .review-page,
+    .payment-page,
+    .payment-pending-page,
+    .confirmed-page {
+        align-items: flex-start;
+        padding: 50px 20px 70px;
+    }
+
+    .review-row,
+    .ticket-row {
+        gap: 12px;
+    }
+
+    .ticket-card,
+    .payment-card,
+    .guest-price {
+        padding: 18px;
+    }
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Payment - 2K27 Prom</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="payment-page">
+
+        <div class="content">
+
+            <p class="small-title">
+                ONE LAST STEP
+            </p>
+
+
+            <h2>
+                Secure your
+                <span>spot.</span>
+            </h2>
+
+
+<div class="payment-card">
+
+    <p class="payment-label">
+        REGISTRATION ID
+    </p>
+
+    <p class="registration-id">
+        {{ registration }}
+    </p>
+
+    <div class="payment-divider"></div>
+
+    <p class="payment-label">
+        REGISTRATION FEE
+    </p>
+
+    <h3 class="payment-price">
+        ₦PRICE
+    </h3>
+
+
+                <div class="payment-divider"></div>
+
+
+                <p class="payment-label">
+                    PAY TO
+                </p>
+
+                <p class="account-name">
+                    ACCOUNT NAME
+                </p>
+
+
+                <p class="payment-label">
+                    ACCOUNT NUMBER
+                </p>
+
+                <p class="account-number">
+                    xxxxxxxxxx
+                </p>
+
+
+                <p class="payment-note">
+                    After making the payment,
+                    click the button below.
+                </p>
+
+            </div>
+
+
+           <form
+    method="POST"
+    action="/payment-reported"
+>
+
+    <input
+        type="hidden"
+        name="registration"
+        value="{{ registration }}"
+    >
+
+    <button
+        type="submit"
+        class="register-button"
+    >
+
+        <span>
+            I'VE MADE PAYMENT
+        </span>
+
+        <span class="arrow">
+            →
+        </span>
+
+    </button>
+
+</form>
+
+            <p class="payment-warning">
+                Only continue after completing your payment.
+            </p>
+
+        </div>
+
+
+        <div class="page-number">
+            05 / 07
+        </div>
+
+    </main>
+
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</body>
+
+</html>

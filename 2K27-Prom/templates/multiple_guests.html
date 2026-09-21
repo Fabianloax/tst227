@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>More Guests - 2K27 Prom</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="multiple-guests-page">
+
+        <div class="content">
+
+            <p class="small-title">
+                HOLD UP...
+            </p>
+
+            <h2>
+                More than
+                <span>one guest?</span>
+            </h2>
+
+            <p class="guest-warning">
+                Having more than one guest?
+                That's gonna cost your broke ahh
+                a little more.
+            </p>
+
+
+            <div class="guest-price">
+
+                <p>
+                    ADDITIONAL GUEST FEE
+                </p>
+
+                <h3>
+                    ₦price
+                </h3>
+
+            </div>
+
+
+            <div class="guest-actions">
+
+                <button
+                    class="secondary-button"
+                    onclick="forgetExtraGuest()"
+                >
+                    NEVER MIND
+                </button>
+
+
+                <button
+                    class="register-button"
+                    onclick="continueWithExtraGuest()"
+                >
+                    <span>CONTINUE</span>
+
+                    <span class="arrow">
+                        →
+                    </span>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="page-number">
+            03 / 04
+        </div>
+
+    </main>
+
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</body>
+
+</html>

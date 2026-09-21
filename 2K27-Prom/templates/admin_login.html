@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Admin Login - 2K27 Prom</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="admin-login-page">
+
+        <div class="content">
+
+            <p class="small-title">
+                2K27 PROM
+            </p>
+
+
+            <h2>
+                Admin
+                <span>Access.</span>
+            </h2>
+
+
+            <p class="admin-login-description">
+                Enter the administrator password
+                to continue.
+            </p>
+
+
+            <form
+                method="POST"
+                action="{{ url_for('admin_login') }}"
+                class="admin-login-form"
+            >
+
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="PASSWORD"
+                    autocomplete="current-password"
+                    required
+                >
+
+
+                <button
+                    type="submit"
+                    class="register-button"
+                >
+
+                    <span>
+                        ENTER ADMIN
+                    </span>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </button>
+
+            </form>
+
+
+            {% if error %}
+
+            <p class="admin-login-error">
+                {{ error }}
+            </p>
+
+            {% endif %}
+
+        </div>
+
+
+        <div class="page-number">
+            ADMIN
+        </div>
+
+    </main>
+
+</body>
+
+</html>

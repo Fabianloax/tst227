@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Confirmed - 2K27 Prom</title>
+
+<link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}"
+>
+
+</head>
+
+<body>
+
+<main class="confirmed-page">
+
+    <div class="content">
+
+        <p class="small-title">
+            PAYMENT CONFIRMED
+        </p>
+
+
+        <h2>
+            You're
+            <span>in.</span>
+        </h2>
+
+
+        <p class="confirmed-description">
+            Your registration has been approved.
+            Keep your entrance code safe.
+        </p>
+
+
+        <div class="ticket-card">
+
+            <div class="ticket-header">
+
+                <span>
+                    2K27 PROM
+                </span>
+
+                <span>
+                    CONFIRMED
+                </span>
+
+            </div>
+
+
+            <div class="ticket-divider"></div>
+
+
+            <div class="ticket-details">
+
+                <div class="ticket-row">
+
+                    <span>
+                        NAME
+                    </span>
+
+                    <strong>
+                        {{ registration.name }}
+                    </strong>
+
+                </div>
+
+
+                <div class="ticket-row">
+
+                    <span>
+                        GUEST
+                    </span>
+
+                    <strong>
+                        {{ registration.guest_name or "No guest" }}
+                    </strong>
+
+                </div>
+
+
+                <div class="ticket-row">
+
+                    <span>
+                        REGISTRATION
+                    </span>
+
+                    <strong>
+                        {{ registration.registration_code }}
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="ticket-divider"></div>
+
+
+            <div class="entrance-section">
+
+                <p class="payment-label">
+                    ENTRANCE CODE
+                </p>
+
+                <div class="entrance-code">
+                    {{ registration.entrance_code }}
+                </div>
+
+                <p class="entrance-note">
+                    Present this code at the entrance.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <p class="confirmed-footer">
+            Payment verified • Registration secured
+        </p>
+
+    </div>
+
+
+    <div class="page-number">
+        CONFIRMED
+    </div>
+
+</main>
+
+</body>
+
+</html>

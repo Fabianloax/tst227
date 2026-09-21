@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Payment Pending - 2K27 Prom</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="payment-pending-page">
+
+        <div class="content">
+
+            <p class="small-title">
+                PAYMENT RECEIVED
+            </p>
+
+
+            <h2>
+                We're checking
+                <span>your payment.</span>
+            </h2>
+
+
+            <p class="pending-text">
+                Your registration has been submitted
+                and is waiting for payment confirmation.
+            </p>
+
+
+            <div class="pending-status">
+
+                <span class="status-dot"></span>
+
+                PAYMENT VERIFICATION PENDING
+
+            </div>
+
+
+            <div class="confirmation-card">
+
+                <p class="confirmation-label">
+                    REGISTRATION ID
+                </p>
+
+                <p class="confirmation-value">
+                    {{ registration.registration_code }}
+                </p>
+
+            </div>
+
+
+            <a
+                href="{{ url_for('status', registration=registration.registration_code) }}"
+                class="register-button"
+            >
+
+                <span>
+                    CHECK STATUS
+                </span>
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </a>
+
+
+            <p class="pending-note">
+                Your entrance code will appear here
+                once your payment has been confirmed.
+            </p>
+
+        </div>
+
+
+        <div class="page-number">
+            06 / 07
+        </div>
+
+    </main>
+
+</body>
+
+</html>

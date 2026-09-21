@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Details - 2K27 Prom</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="details-page">
+
+        <div class="content">
+
+            <p class="small-title">
+                YOUR DETAILS
+            </p>
+
+            <h2>
+                Tell us
+                <span>about you.</span>
+            </h2>
+
+
+            <form id="details-form">
+
+                <div class="input-group">
+
+                    <label for="name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Your name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="you@example.com"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="080..."
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="guestName">
+                        Guest Name
+                        <span class="optional">
+                            Optional
+                        </span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="guestName"
+                        name="guestName"
+                        placeholder="Your guest's name"
+                    >
+
+                </div>
+
+
+               <a
+    href="/multiple-guests"
+    class="multiple-guests-link"
+    onclick="goToMultipleGuests(); return false;"
+>
+    I have more than one guest...
+</a>
+
+
+                <button
+                    type="submit"
+                    class="register-button"
+                >
+
+                    <span>SUBMIT</span>
+
+                    <span class="arrow">→</span>
+
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <div class="page-number">
+            03 / 04
+        </div>
+
+    </main>
+
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</body>
+
+</html>
